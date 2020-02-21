@@ -1,0 +1,41 @@
+{
+  "books": [
+    {
+      "title": "Book 1",
+      "authors": "Authors: 1",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Book 2",
+      "authors": "Authors: 2"
+    },
+    {
+      "id": 3,
+      "title": "Book 3",
+      "authors": "Authors: 3"
+    },
+    {
+      "title": "Title 4",
+      "authors": "Authors: 4",
+      "id": 4
+    },
+    {
+      "title": "Book 5",
+      "authors": "Authors: 5",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "email2@test.com",
+      "password": "$2a$10$wQSbH3hzwh2lD0PMeILt5OcAD03ZiMAskFi4EtC6hrnWTpltbhEC.",
+      "id": 1
+    },
+    {
+      "email": "email3@test.com",
+      "password": "$2a$10$lJSOQE0LqjuL/pT1UM9i0.gvGfVxL2qMO4q0iVX13577eofQbj8se",
+      "id": 2
+    }
+  ]
+}

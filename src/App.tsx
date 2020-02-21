@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import "./App.css"
+import { PrivateRoute } from "./common/UI"
+import { Dashboard } from "./components/Dashboard"
+import { Profile } from "./components/Profile"
+import { Login } from "./components/Login"
+import { Register } from "./components/Register"
+import { Header } from "./components/Header"
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <PrivateRoute exact component={Dashboard} path="/" />
+        <PrivateRoute exact component={Profile} path="/profile" />
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App

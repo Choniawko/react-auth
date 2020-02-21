@@ -24,6 +24,9 @@
   color: white;
 }
 
+.App-header a {
+  color: #61dafb;
+}
 .App-link {
   color: #61dafb;
 }
