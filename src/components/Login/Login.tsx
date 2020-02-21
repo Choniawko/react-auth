@@ -18,7 +18,7 @@ export const Login: FC = () => {
       method: "POST",
       data: { email, password },
     })
-      .then(res => {
+      .then(() => {
         push("/")
       })
       .catch(({ message }: Error) => {
@@ -36,8 +36,18 @@ export const Login: FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>{error}</div>
-      <input name="email" onInput={handleInput("email")} />
-      <input name="password" onInput={handleInput("password")} />
+      <div>
+        <label>email</label>
+        <input name="email" onInput={handleInput("email")} />
+      </div>
+      <div>
+        <label>password</label>
+        <input
+          name="password"
+          type="password"
+          onInput={handleInput("password")}
+        />
+      </div>
       <button>Submit</button>
     </form>
   )

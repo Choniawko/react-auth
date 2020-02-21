@@ -38,11 +38,30 @@ export const Register: FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>{error}</div>
-      <input name="email" onInput={handleInput("email")} />
-      <input name="password" onInput={handleInput("password")} />
-      <input name="firstname" onInput={handleInput("firstname")} />
-      <input name="lastname" onInput={handleInput("lastname")} />
-      <input name="age" type="number" onInput={handleInput("age")} />
+      <div>
+        <label>email</label>
+        <input name="email" onInput={handleInput("email")} />
+      </div>
+      <div>
+        <label>password</label>
+        <input
+          name="password"
+          type="password"
+          onInput={handleInput("password")}
+        />
+      </div>
+      <div>
+        <label>Firstname</label>
+        <input name="firstname" onInput={handleInput("firstname")} />
+      </div>
+      <div>
+        <label>email</label>
+        <input name="lastname" onInput={handleInput("lastname")} />
+      </div>
+      <div>
+        <label>email</label>
+        <input name="age" type="number" onInput={handleInput("age")} />
+      </div>
       <button>Submit</button>
     </form>
   )
